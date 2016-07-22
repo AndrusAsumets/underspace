@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    </head>
+    <style>
+        .root {
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        .rc-calendar {
+            width: 25%
+        }
+    </style
+    <body>
+        <div id="app"></div>
+
+
+        <div u-component="Hello">
+            <div u-component="Date2" u-props="[user: state.user, dispatch: state.dispatch]"></div>
+        </div>
+
+
+        <script src="lib/underspace.min.js"></script>
+    </body>
+</html>

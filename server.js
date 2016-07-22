@@ -25,7 +25,7 @@ router.get('*',
 
 		else if (HREF === '/') this.body = fs.readFileSync(INDEX_PATH, 'utf8')
 
-        else if (HREF === '/webhook') exec('git pull')
+        else if (HREF.startsWith('/webhook')) exec('git pull')
 
         else this.body = fs.readFileSync(LIB_PATH, 'utf8')
     }

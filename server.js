@@ -4,6 +4,7 @@ let router = require('koa-router')()
 var path = require('path')
 var fs = require('fs')
 var url = require('url')
+var exec = require('child_process').exec
 const querystring = require('querystring')
 const PORT = 3008
 
@@ -17,12 +18,14 @@ router.get('*',
         const QUERIES = querystring.parse(URL.query)
 
         if (HREF.startsWith('/components')) {
-			const COMPONENT_PATH = path.join(__dirname, 'dist', HREF)
+			const COMPONENT_PATH = path.join(__dirname, 'components', HREF, 'build', 'app.js')
             this.type = 'application/javascript'
             this.body = fs.readFileSync(COMPONENT_PATH, 'utf8')
         }
 
 		else if (HREF === '/') this.body = fs.readFileSync(INDEX_PATH, 'utf8')
+
+        else if (HREF === '/webhook') exec('git pull')
 
         else this.body = fs.readFileSync(LIB_PATH, 'utf8')
     }

@@ -18,7 +18,7 @@ router.get('*',
         const QUERIES = querystring.parse(URL.query)
 
         if (HREF.startsWith('/components')) {
-			const COMPONENT_PATH = path.join(__dirname, 'components', HREF, 'build', 'app.js')
+			const COMPONENT_PATH = path.join(__dirname, HREF, 'build', 'app.js')
             this.type = 'application/javascript'
             this.body = fs.readFileSync(COMPONENT_PATH, 'utf8')
         }

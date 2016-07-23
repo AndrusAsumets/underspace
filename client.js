@@ -46,10 +46,6 @@ var App = React.createClass({
     render() {
         const { elements, components } = this.state
 
-        elements.map((element, i) =>
-             console.log(element)
-        )
-
         return (
             <div className="root">
                 {[...elements].map((element, i) =>

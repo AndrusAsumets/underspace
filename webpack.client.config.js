@@ -6,7 +6,7 @@ module.exports = {
     output: {
         path: __dirname,
         filename: '/dist/lib/underspace.min.js',
-        publicPath: 'http://localhost:3007/'
+        publicPath: 'http://localhost:3008/'
     },
     module: {
         loaders: [

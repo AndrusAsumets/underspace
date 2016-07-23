@@ -1,19 +1,17 @@
 var path = require('path')
 var webpack = require('webpack')
-var fs = require('fs')
 var path = require('path')
 let COMPONENT = process.argv[2]
 
-module.exports = {
-    entry: path.join(__dirname, 'components', COMPONENT, 'init.js'),
+var config =  {
+    entry: './components/' + COMPONENT + '/init.js',
     externals: {
         react: 'React',
         reactDOM: 'ReactDOM'
     },
     output: {
-        path: path.join(__dirname, 'components', COMPONENT, 'build'),
-        filename:  'app.js',
-        //publicPath: '/components/' + COMPONENT
+        path: __dirname + '/components/' + COMPONENT + '/build/',
+        filename: 'app.js'
     },
     module: {
         loaders: [
@@ -46,3 +44,5 @@ module.exports = {
         colors: true
     }
 }
+
+webpack(config, function(err, stats) { })

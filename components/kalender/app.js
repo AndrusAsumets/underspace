@@ -1,11 +1,10 @@
 import { Component } from 'react';
+import Calendar from 'rc-calendar'
 
 export default class Content extends Component {
     render() {
         return (
-            <div>
-                Hello, World2!
-            </div>
+            <Calendar />
         )
     }
 }

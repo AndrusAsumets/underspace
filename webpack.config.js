@@ -45,4 +45,7 @@ var config =  {
     }
 }
 
-webpack(config, function(err, stats) { })
+webpack(config, function(err, stats) {
+    if (err) console.log(err)
+    console.log(stats)
+})

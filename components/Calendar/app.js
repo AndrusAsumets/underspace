@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import Calendar from 'rc-calendar';
 import Timeline from 'react-calendar-timeline'
-import moment from 'moment'
+var moment = require('moment')
 
 const groups = [
   {id: 1, title: 'group 1'},

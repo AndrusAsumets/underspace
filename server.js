@@ -31,6 +31,19 @@ router.get('*',
     }
 )
 
+router.post('*',
+    async function(next) {
+        const URL = url.parse(this.request.url)
+        const HREF = URL.href
+        const DIST_PATH = path.join(__dirname, 'dist')
+		const INDEX_PATH = path.join(DIST_PATH, 'index.html')
+		const LIB_PATH = path.join(DIST_PATH, HREF)
+        const QUERIES = querystring.parse(URL.query)
+
+		if (HREF === '/webhook') this.body = exec('git pull')
+    }
+)
+
 app.use(router.routes())
 app.listen(PORT)
 

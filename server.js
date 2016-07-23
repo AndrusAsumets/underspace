@@ -31,7 +31,8 @@ router.get('*',
 
 router.post('*',
     async function(next) {
-        //exec('git pull')
+        exec('git pull')
+        this.status = 200
         this.type = 'json'
         this.body = 'success'
     }

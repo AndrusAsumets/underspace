@@ -2,6 +2,11 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 var assign = require('object-assign');
 
+//create react root
+let underspace = document.createElement('div')
+underspace.id = 'underspace'
+document.getElementsByTagName('body')[0].appendChild(underspace)
+
 var App = React.createClass({
     getInitialState() {
         return { elements: [], components: {} }
@@ -68,7 +73,7 @@ var Display = React.createClass({
 
 ReactDOM.render(
     <App />,
-    document.getElementById('app')
+    document.getElementById('underspace')
 )
 
 var Escape = React.createClass({

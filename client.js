@@ -18,7 +18,7 @@ var App = React.createClass({
             async function load(component) {
                 if (!window[component]) {
                     window[component] = 'fetching'
-                    const res = await fetch('/components/' + component + '/app.js')
+                    const res = await fetch('/components/' + component + '/build/app.js')
                     const text = await res.text()
                     new Function(text)()
                     elements.push(component)

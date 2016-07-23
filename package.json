@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "description": "",
   "scripts": {
-      "start": "node init.js"
+      "watch": "webpack --config webpack.client.config --watch",
+      "start": "node server.init.js"
   },
   "dependencies": {
     "babel-core": "^6.5.2",
@@ -22,6 +23,7 @@
     "koa-router": "^5.4.0",
     "react": "^15.2.1",
     "react-dom": "^15.2.1",
-    "webpack": "^1.13.1"
+    "webpack": "^1.13.1",
+    "whatwg-fetch": "^1.0.0"
   }
 }

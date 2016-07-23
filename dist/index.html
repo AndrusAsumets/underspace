@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     </head>
     <style>
-        .root, .app {
+        .calendars {
             display: flex;
             flex-flow: row wrap;
         }
@@ -17,8 +17,19 @@
     <body>
         <div id="app"></div>
 
-        <div u-component="HelloWorld"></div>
-        <div u-component="Calendar"></div>
+        <div id="0" u-component="HelloWorld"></div>
+        <div class="calendars">
+            <div id="1" u-component="Calendar"></div>
+            <div id="2" u-component="Calendar"></div>
+            <div id="3" u-component="Calendar"></div>
+            <div id="4" u-component="Calendar"></div>
+            <div id="5" u-component="Calendar"></div>
+            <div id="6" u-component="Calendar"></div>
+            <div id="7" u-component="Calendar"></div>
+            <div id="8" u-component="Calendar"></div>
+            <div id="9" u-component="Calendar"></div>
+            <div id="10" u-component="Calendar"></div>
+        </div>
 
         <script src="lib/underspace.min.js"></script>
     </body>

@@ -25,15 +25,13 @@ router.get('*',
 
 		else if (HREF === '/') this.body = fs.readFileSync(INDEX_PATH, 'utf8')
 
-        else if (HREF.startsWith('/webhook')) exec('git pull')
-
         else this.body = fs.readFileSync(LIB_PATH, 'utf8')
     }
 )
 
 router.post('*',
     async function(next) {
-        exec('git pull')
+        //exec('git pull')
         this.type = 'json'
         this.body = 'success'
     }

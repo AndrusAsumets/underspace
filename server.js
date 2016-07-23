@@ -1,6 +1,7 @@
 let app = require('koa')()
 require('koa-qs')(app, 'extended')
 let router = require('koa-router')()
+var noCache = require('koa-no-cache')
 var path = require('path')
 var fs = require('fs')
 var url = require('url')
@@ -39,6 +40,9 @@ router.post('*',
 )
 
 app.use(router.routes())
+app.use(noCache({
+  global: true
+}))
 app.listen(PORT)
 
 console.log('Started application at', PORT)

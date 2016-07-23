@@ -19,7 +19,6 @@
     "expose-loader": "^0.7.1",
     "jsx-loader": "^0.13.2",
     "koa": "^1.2.0",
-    "koa-no-cache": "^1.1.0",
     "koa-qs": "^2.0.0",
     "koa-router": "^5.4.0",
     "react": "^15.2.1",

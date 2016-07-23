@@ -13,12 +13,22 @@ var config =  {
         path: __dirname + '/components/' + COMPONENT + '/build/',
         filename: 'app.js'
     },
+    resolve: {
+      modules: [
+        path.resolve(__dirname, 'node_modules')
+      ]
+    },
+    /*
+    include: [
+        path.resolve(__dirname, 'node_modules')
+    ],
+    */
     module: {
         loaders: [
             {
                 test: /\.js$/,
                 loaders: ['babel'],
-                exclude: /(node_modules|bower_components)/,
+                //exclude: /(node_modules|bower_components)/,
             },
             {
                  test: /\.scss$/,

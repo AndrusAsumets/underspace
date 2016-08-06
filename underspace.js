@@ -15,11 +15,11 @@ var App = React.createClass({
         const DELAY = 50
         var self = this
         let { elements, components } = this.state
-        let tree = document.querySelectorAll('[u-component]')
+        let tree = document.querySelectorAll('[component]')
 
         tree = [].slice.call(tree)
         tree.forEach(function(branch) {
-            const component = branch.getAttribute('u-component')
+            const component = branch.getAttribute('component')
 
             async function load(component, branch) {
                 if (!window[component]) {

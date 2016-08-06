@@ -1,13 +1,143 @@
 <!DOCTYPE html>
-<html>
-    <head lang="en">
+<html lang="en">
+    <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <title>underspace</title>
+        <style>
+            *:focus {
+                outline: none;
+            }
+
+            a:link,
+            a:visited,
+            a:hover,
+            a:active {
+                color: #ff4e00;
+                text-decoration: underline;
+            }
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5 {
+                background-color: white;
+                padding: 10px;
+                color: #ff4e00;
+            }
+
+            .divide-50 {
+                height: 50px;
+            }
+
+            .divide-75 {
+                height: 75px;
+            }
+
+            .divide-100 {
+                height: 100px;
+            }
+
+            .border-bottom {
+                border-bottom: 2px dotted white;
+            }
+
+            .center {
+            	display: -webkit-flex;
+            	display: flex;
+            	-webkit-flex-direction: row;
+            	flex-direction: row;
+            	-webkit-align-items: center;
+            	align-items: center;
+            	-webkit-justify-content: center;
+            	justify-content: center;
+            }
+
+            body {
+                background-color: #ff4e00;
+                color: white;
+                font-family: monospace;
+                font-weight: 300;
+                margin: 0;
+                padding: 0;
+                letter-spacing: 1px;
+                line-height: 200%;
+            }
+
+            .container {
+                max-width: 800px;
+                position: absolute;
+                left: 0;
+                right: 0;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 20px;
+                background-color: #ff4e00;
+            }
+
+            .Calendar {
+                font-size: 14px;
+                padding: 10px;
+            }
+
+            @media (max-width: 800px) {
+                .Calendars {
+                    max-width: 150px;
+                    display: block;
+                    position: relative;
+                    left: 0;
+                    right: 0;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        </style>
+
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-82086860-1', 'auto');
+          ga('send', 'pageview');
+
+        </script>
     </head>
 
     <body>
-        <div component="HelloWorld"></div>
-        <div component="Calendar"></div>
+        <div class="divide-75"></div>
+
+        <div class="container">
+            <div component="HelloWorld"></div>
+
+            <h5>For an example, here is bunch of basic calendar components that were initiated dynamically, on the fly:</h5>
+
+            <div class="divide-50"></div>
+
+            <div class="Calendars center">
+                <div component="Calendar" class="Calendar"></div>
+                <div component="Calendar" class="Calendar"></div>
+                <div component="Calendar" class="Calendar"></div>
+            </div>
+
+            <div class="divide-50 border-bottom"></div>
+
+            <h4>Essentially what it does is that underspace.min.js looks for all the data attributes containing 'component' in HTML, then queries back-end for the component. Since component has been exposed as global variable in the window scope by webpack, it can now be accessed from there and initiated. After initiation, the component will be injected into React's state, and then added to the DOM element which contained the initial 'component' attribute.</h4>
+
+            <h5>Now try checking out browser's Elements as well as Network Activity tabs.</h5>
+
+            <div class="divide-75 border-bottom"></div>
+
+            <h4>CREDITS: Andrus Asumets from <a href="http://planetos.com/" target="_blank">Planet OS</a> and Kaarel Metsaots from <a href="http://pipedrive.com/" target="_blank">Pipedrive</a> (who influenced the idea a lot)</h4>
+
+            <div class="divide-75 border-bottom"></div>
+
+            <h4>GitHub: <a href="https://github.com/AndrusAsumets/underspace" target="_blank">https://github.com/AndrusAsumets/underspace</a></h4>
+
+            <div class="divide-75"></div>
+        </div>
 
         <script src="lib/underspace.min.js"></script>
     </body>

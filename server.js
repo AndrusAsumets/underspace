@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 let app = require('koa')()
 require('koa-qs')(app, 'extended')
 let router = require('koa-router')()
@@ -6,7 +8,7 @@ var fs = require('fs')
 var url = require('url')
 var exec = require('child_process').exec
 const querystring = require('querystring')
-const PORT = 4000
+const PORT = process.env.PORT || 3000
 
 router.get('*',
     async function(next) {

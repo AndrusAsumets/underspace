@@ -91,6 +91,10 @@
                 font-size: 14px;
             }
 
+            ul > li {
+                list-style-type: circle;
+            }
+
             @media (max-width: 800px) {
                 .container {
                     max-width: 640px;
@@ -145,11 +149,22 @@
 
             <div class="divide-75 border-bottom"></div>
 
-            <h4>CREDITS: Andrus Asumets from <a href="http://planetos.com/" target="_blank">Planet OS</a> and Kaarel Metsaots from <a href="http://pipedrive.com/" target="_blank">Pipedrive</a> (who influenced the idea a lot)</h4>
+            <h3>Further goals:</h3>
+
+            <ul>
+                <li>* Implement a process in webpack that splits up files required by component into a single folder by just hash name, so multiple components containing same files would not be included.</li>
+                <li>* Implement recursion, so components could be injected into components.</li>
+                <li>* Implement Redux/MobX functionality, so components could communicate between each other.</li>
+            </ul>
 
             <div class="divide-75 border-bottom"></div>
 
             <h4>GitHub: <a href="https://github.com/AndrusAsumets/underspace" target="_blank">https://github.com/AndrusAsumets/underspace</a></h4>
+
+            <div class="divide-75 border-bottom"></div>
+
+            <h4>CREDITS: Andrus Asumets from <a href="http://planetos.com/" target="_blank">Planet OS</a> and Kaarel Metsaots from <a href="http://pipedrive.com/" target="_blank">Pipedrive</a> (who influenced the idea a lot)</h4>
+
 
             <div class="divide-75"></div>
         </div>

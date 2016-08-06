@@ -36,6 +36,10 @@
                 color: #ff4e00;
             }
 
+            .divide-10 {
+                height: 10px;
+            }
+
             .divide-25 {
                 height: 25px;
             }
@@ -163,9 +167,9 @@
 
             <div class="background center">About</div>
 
-            <h4>Essentially what it does is that underspace.min.js looks for all the data attributes containing 'component' in HTML, then queries back-end for the component. Since component has been exposed as global variable in the window scope by webpack, it can now be accessed from there and initiated. After initiation, the component will be injected into React's state, and then added to the DOM element which contained the initial 'component' attribute.</h4>
+            <h3>Essentially what it does is that underspace.min.js looks for all the data attributes containing 'component' in HTML, then queries back-end for the component. Since component has been exposed as global variable in the window scope by webpack, it can now be accessed from there and initiated. After initiation, the component will be injected into React's state, and then added to the DOM element which contained the initial 'component' attribute.</h3>
 
-            <h5>Now try checking out browser's Elements as well as Network Activity tabs.</h5>
+            <h3>Now try checking out browser's Elements as well as Network Activity tabs.</h3>
 
             <div class="divide-75"></div>
 
@@ -173,23 +177,31 @@
 
             <div class="divide-25"></div>
 
-            <ul>
-                <li>* Implement a process in webpack that splits up files required by component into a single folder by just hash name, so multiple components containing same files would not be included.</li>
-                <li>* Implement recursion, so components could be injected into components.</li>
-                <li>* Implement Redux/MobX functionality, so components could communicate between each other.</li>
-            </ul>
+            <h3>
+                <ul>
+                    <li>* Implement a process in webpack that splits up files required by component into a single folder by just hash name, so multiple components containing same files would not be included.</li>
+
+                    <div class="divide-25"></div>
+
+                    <li>* Implement recursion, so components could be injected into components.</li>
+
+                    <div class="divide-25"></div>
+
+                    <li>* Implement Redux/MobX functionality, so components could communicate between each other.</li>
+                </ul>
+            </h3>
 
             <div class="divide-75"></div>
 
             <div class="background center">GitHub</div>
 
-            <h4><a href="https://github.com/AndrusAsumets/underspace" target="_blank">https://github.com/AndrusAsumets/underspace</a></h4>
+            <h3><a href="https://github.com/AndrusAsumets/underspace" target="_blank">https://github.com/AndrusAsumets/underspace</a></h3>
 
             <div class="divide-75"></div>
 
             <div class="background center">Credits</div>
 
-            <h4>Andrus Asumets (<a href="http://planetos.com/" target="_blank">Planet OS</a>) and Kaarel Metsaots (<a href="http://pipedrive.com/" target="_blank">Pipedrive</a>)</h4>
+            <h3>Andrus Asumets (<a href="http://planetos.com/" target="_blank">Planet OS</a>) and Kaarel Metsaots (<a href="http://pipedrive.com/" target="_blank">Pipedrive</a>)</h3>
 
 
             <div class="divide-75"></div>

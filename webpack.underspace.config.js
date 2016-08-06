@@ -2,7 +2,7 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-    entry: ['whatwg-fetch', './client.init'],
+    entry: ['whatwg-fetch', './underspace.init'],
     output: {
         path: __dirname,
         filename: '/dist/lib/underspace.min.js',

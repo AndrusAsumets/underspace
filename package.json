@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "",
   "scripts": {
-    "watch": "webpack --config webpack.client.config --watch",
+    "watch": "webpack --config webpack.underspace.config --watch",
     "start": "node server.init.js"
   },
   "dependencies": {

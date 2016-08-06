@@ -87,12 +87,13 @@
                 background-color: #ff4e00;
             }
 
-            .Calendar {
+            [component*="Calendar"] {
+                background-color: white;
+                color: #ff4e00;
                 font-size: 14px;
-            }
-
-            ul > li {
-                list-style-type: circle;
+                margin: 10px;
+                padding: 10px;
+                width: 200px;
             }
 
             @media (max-width: 800px) {
@@ -101,13 +102,22 @@
                 }
 
                 .Calendars {
-                    max-width: 150px;
+                    max-width: 100%;
                     display: block;
                     position: relative;
                     left: 0;
                     right: 0;
                     margin-left: auto;
                     margin-right: auto;
+                }
+
+                [component*="Calendar"] {
+                    background-color: white;
+                    color: #ff4e00;
+                    font-size: 14px;
+                    margin: 10px;
+                    padding: 10px;
+                    width: 200px;
                 }
             }
         </style>
@@ -131,14 +141,15 @@
 
             <h3>underspace is a proof of concept demo, which allows for dynamically injecting React components into DOM by writing nothing but pure HTML. In another words, WordPress on React.</h3>
 
-            <h5>For an example, here is bunch of basic calendar components that were initiated dynamically, on the fly:</h5>
+            <h5>For an example, here is a calendar component that was initiated dynamically, on the fly:</h5>
 
             <div class="divide-50"></div>
 
             <div class="Calendars center">
-                <div component="Calendar" class="Calendar"></div>
-                <div component="Calendar" class="Calendar"></div>
-                <div component="Calendar" class="Calendar"></div>
+                <div>
+                    demo:
+                    <div component="Calendar" class="center"></div>
+                </div>
             </div>
 
             <div class="divide-50 border-bottom"></div>

@@ -2,7 +2,6 @@ require('dotenv').config();
 
 let app = require('koa')()
 require('koa-qs')(app, 'extended')
-import serve from 'koa-static-folder'
 let router = require('koa-router')()
 var path = require('path')
 var fs = require('fs')
@@ -41,7 +40,6 @@ router.post('*',
     }
 )
 
-serve(__dirname + '/public/')
 app.use(router.routes())
 app.listen(PORT)
 

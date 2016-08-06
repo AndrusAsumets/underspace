@@ -23,8 +23,6 @@
     "koa": "^1.2.0",
     "koa-qs": "^2.0.0",
     "koa-router": "^5.4.0",
-    "koa-static": "^2.0.0",
-    "koa-static-folder": "^0.1.6",
     "react": "^15.2.1",
     "react-dom": "^15.2.1",
     "webpack": "^1.13.1",

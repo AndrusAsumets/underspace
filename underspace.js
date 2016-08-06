@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-var assign = require('object-assign');
 
 //create react root
 let underspace = document.createElement('div')

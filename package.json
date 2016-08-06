@@ -5,7 +5,7 @@
   "scripts": {
     "watch": "webpack --config webpack.underspace.config --watch",
     "serve": "node server.init.js",
-    "author": "Andrus Asumets <aasumets@planetos.com>",
+    "author": "Andrus Asumets <aasumets@planetos.com>"
   },
   "dependencies": {
     "babel-core": "^6.5.2",

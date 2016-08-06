@@ -1,10 +1,11 @@
 {
   "name": "underspace",
   "version": "0.0.1",
-  "description": "",
+  "description": "underspace is a proof of concept demo, which allows for dynamically injecting React components into DOM by writing nothing but pure HTML. In another words, WordPress on React.",
   "scripts": {
     "watch": "webpack --config webpack.underspace.config --watch",
-    "start": "node server.init.js"
+    "serve": "node server.init.js",
+    "author": "Andrus Asumets <aasumets@planetos.com>",
   },
   "dependencies": {
     "babel-core": "^6.5.2",

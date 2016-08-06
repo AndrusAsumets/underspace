@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
         <title>underspace</title>
         <style>
             *:focus {
@@ -54,11 +55,6 @@
             	justify-content: center;
             }
 
-            html, body {
-                max-width: 100%;
-                overflow-x: hidden;
-            }
-
             body {
                 background-color: #ff4e00;
                 color: white;
@@ -68,6 +64,12 @@
                 padding: 0;
                 letter-spacing: 1px;
                 line-height: 200%;
+                overflow: hidden;
+                width: 100%;
+                -webkit-box-sizing: border-box;
+                   -moz-box-sizing: border-box;
+                        box-sizing: border-box;
+                }
             }
 
             .container {
@@ -87,12 +89,6 @@
             }
 
             @media (max-width: 800px) {
-                .container {
-                    max-width: none;
-                    width: 100%;
-                    overflow: hidden;
-                }
-
                 .Calendars {
                     max-width: 150px;
                     display: block;

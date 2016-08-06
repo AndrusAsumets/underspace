@@ -18,7 +18,7 @@
             a:visited,
             a:hover,
             a:active {
-                color: #ff4e00;
+                color: white;
                 text-decoration: underline;
             }
 
@@ -27,10 +27,17 @@
             h3,
             h4,
             h5 {
-                background-color: white;
                 padding: 10px;
-                color: #ff4e00;
                 word-wrap: break-word;
+            }
+
+            .background {
+                background-color: white;
+                color: #ff4e00;
+            }
+
+            .divide-25 {
+                height: 25px;
             }
 
             .divide-50 {
@@ -137,30 +144,34 @@
         <div class="divide-75"></div>
 
         <div class="container">
-            <div component="HelloWorld"></div>
+            <div component="HelloWorld" class="background"></div>
 
-            <h3>underspace is a proof of concept demo, which allows for dynamically injecting React components into DOM by writing nothing but pure HTML. In another words, WordPress on React.</h3>
+            <h3>underspace is a proof of concept demo of a process, which allows for dynamically injecting React components into DOM by writing nothing but pure HTML. In another words, WordPress on React.</h3>
 
-            <h5>For an example, here is a calendar component that was initiated dynamically, on the fly:</h5>
+            <h3>For an example, here is a calendar component that was initiated dynamically, on the fly:</h3>
 
             <div class="divide-50"></div>
 
             <div class="Calendars center">
                 <div>
-                    demo:
+                    demo
                     <div component="Calendar" class="center"></div>
                 </div>
             </div>
 
-            <div class="divide-50 border-bottom"></div>
+            <div class="divide-75"></div>
+
+            <div class="background center">About</div>
 
             <h4>Essentially what it does is that underspace.min.js looks for all the data attributes containing 'component' in HTML, then queries back-end for the component. Since component has been exposed as global variable in the window scope by webpack, it can now be accessed from there and initiated. After initiation, the component will be injected into React's state, and then added to the DOM element which contained the initial 'component' attribute.</h4>
 
             <h5>Now try checking out browser's Elements as well as Network Activity tabs.</h5>
 
-            <div class="divide-75 border-bottom"></div>
+            <div class="divide-75"></div>
 
-            <h3>Further goals:</h3>
+            <div class="background center">Further goals</div>
+
+            <div class="divide-25"></div>
 
             <ul>
                 <li>* Implement a process in webpack that splits up files required by component into a single folder by just hash name, so multiple components containing same files would not be included.</li>
@@ -168,13 +179,17 @@
                 <li>* Implement Redux/MobX functionality, so components could communicate between each other.</li>
             </ul>
 
-            <div class="divide-75 border-bottom"></div>
+            <div class="divide-75"></div>
 
-            <h4>GitHub: <a href="https://github.com/AndrusAsumets/underspace" target="_blank">https://github.com/AndrusAsumets/underspace</a></h4>
+            <div class="background center">GitHub</div>
 
-            <div class="divide-75 border-bottom"></div>
+            <h4><a href="https://github.com/AndrusAsumets/underspace" target="_blank">https://github.com/AndrusAsumets/underspace</a></h4>
 
-            <h4>CREDITS: Andrus Asumets from <a href="http://planetos.com/" target="_blank">Planet OS</a> and Kaarel Metsaots from <a href="http://pipedrive.com/" target="_blank">Pipedrive</a> (who influenced the idea a lot)</h4>
+            <div class="divide-75"></div>
+
+            <div class="background center">Credits</div>
+
+            <h4>Andrus Asumets (<a href="http://planetos.com/" target="_blank">Planet OS</a>) and Kaarel Metsaots (<a href="http://pipedrive.com/" target="_blank">Pipedrive</a>)</h4>
 
 
             <div class="divide-75"></div>
